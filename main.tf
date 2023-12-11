@@ -16,10 +16,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
-resource "random_pet" "sg" {}
+resource "random_pet" "sg" {
+  #vpc_security_group_ids = ["sg-0fee455f91fe03dc6"]
+}
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -44,11 +46,13 @@ resource "aws_instance" "web" {
 
   user_data = <<-EOF
               #!/bin/bash
-              apt-get update
+              apt-get update -y
+              apt-get install -y git wget curl nano vim htop net-tools
               apt-get install -y apache2
               sed -i -e 's/80/8080/' /etc/apache2/ports.conf
               echo "Hello World" > /var/www/html/index.html
               systemctl restart apache2
+              systemctl enable apache2
               EOF
 }
 
