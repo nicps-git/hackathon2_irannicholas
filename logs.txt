@@ -1,0 +1,264 @@
+2023-12-12T00:33:17.9389999Z Requested labels: ubuntu-latest
+2023-12-12T00:33:17.9390287Z Job defined at: nicps-git/hackathon2_irannicholas/.github/workflows/terraform-apply.yml@refs/heads/main
+2023-12-12T00:33:17.9390380Z Waiting for a runner to pick up this job...
+2023-12-12T00:33:18.3211645Z Job is waiting for a hosted runner to come online.
+2023-12-12T00:33:22.5597748Z Job is about to start running on the hosted runner: GitHub Actions 1 (hosted)
+2023-12-12T00:33:24.6637660Z Current runner version: '2.311.0'
+2023-12-12T00:33:24.6660587Z ##[group]Operating System
+2023-12-12T00:33:24.6661350Z Ubuntu
+2023-12-12T00:33:24.6661715Z 22.04.3
+2023-12-12T00:33:24.6662044Z LTS
+2023-12-12T00:33:24.6662428Z ##[endgroup]
+2023-12-12T00:33:24.6662854Z ##[group]Runner Image
+2023-12-12T00:33:24.6663286Z Image: ubuntu-22.04
+2023-12-12T00:33:24.6663749Z Version: 20231205.1.0
+2023-12-12T00:33:24.6664721Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231205.1/images/ubuntu/Ubuntu2204-Readme.md
+2023-12-12T00:33:24.6666158Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231205.1
+2023-12-12T00:33:24.6667079Z ##[endgroup]
+2023-12-12T00:33:24.6667489Z ##[group]Runner Image Provisioner
+2023-12-12T00:33:24.6667940Z 2.0.321.1
+2023-12-12T00:33:24.6668355Z ##[endgroup]
+2023-12-12T00:33:24.6669206Z ##[group]GITHUB_TOKEN Permissions
+2023-12-12T00:33:24.6670784Z Contents: read
+2023-12-12T00:33:24.6671264Z Metadata: read
+2023-12-12T00:33:24.6671891Z ##[endgroup]
+2023-12-12T00:33:24.6675087Z Secret source: Actions
+2023-12-12T00:33:24.6675811Z Prepare workflow directory
+2023-12-12T00:33:24.7573735Z Prepare all required actions
+2023-12-12T00:33:24.7730288Z Getting action download info
+2023-12-12T00:33:25.0294622Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-12-12T00:33:25.1633802Z Download action repository 'hashicorp/tfc-workflows-github@v1.0.0' (SHA:4c569ffb1a0f1bf0daf00539abb505bcd246748a)
+2023-12-12T00:33:25.8867888Z Complete job name: Terraform Apply
+2023-12-12T00:33:25.9426360Z ##[group]Pull down action image 'hashicorp/tfci:v1.0.0'
+2023-12-12T00:33:25.9511611Z ##[command]/usr/bin/docker pull hashicorp/tfci:v1.0.0
+2023-12-12T00:33:27.3396344Z v1.0.0: Pulling from hashicorp/tfci
+2023-12-12T00:33:27.5528399Z f56be85fc22e: Pulling fs layer
+2023-12-12T00:33:27.5529164Z 23c25d7c9ed8: Pulling fs layer
+2023-12-12T00:33:27.9160866Z 23c25d7c9ed8: Download complete
+2023-12-12T00:33:27.9406089Z f56be85fc22e: Download complete
+2023-12-12T00:33:28.0446540Z f56be85fc22e: Pull complete
+2023-12-12T00:33:28.1248055Z 23c25d7c9ed8: Pull complete
+2023-12-12T00:33:28.1302220Z Digest: sha256:a0aa9258f77dc46b3eae696fc50e9fe38873ace5dab540f16e99c787e27ec956
+2023-12-12T00:33:28.1324639Z Status: Downloaded newer image for hashicorp/tfci:v1.0.0
+2023-12-12T00:33:28.1331720Z docker.io/hashicorp/tfci:v1.0.0
+2023-12-12T00:33:28.1352373Z ##[endgroup]
+2023-12-12T00:33:28.1682236Z ##[group]Run actions/checkout@v3
+2023-12-12T00:33:28.1682683Z with:
+2023-12-12T00:33:28.1683172Z   repository: nicps-git/hackathon2_irannicholas
+2023-12-12T00:33:28.1683862Z   token: ***
+2023-12-12T00:33:28.1684292Z   ssh-strict: true
+2023-12-12T00:33:28.1684618Z   persist-credentials: true
+2023-12-12T00:33:28.1685018Z   clean: true
+2023-12-12T00:33:28.1685444Z   sparse-checkout-cone-mode: true
+2023-12-12T00:33:28.1685860Z   fetch-depth: 1
+2023-12-12T00:33:28.1686153Z   fetch-tags: false
+2023-12-12T00:33:28.1686542Z   lfs: false
+2023-12-12T00:33:28.1686873Z   submodules: false
+2023-12-12T00:33:28.1687526Z   set-safe-directory: true
+2023-12-12T00:33:28.1688018Z env:
+2023-12-12T00:33:28.1688426Z   TF_CLOUD_ORGANIZATION: ittallet_irannicholas
+2023-12-12T00:33:28.1689316Z   TF_API_TOKEN: ***
+2023-12-12T00:33:28.1689781Z   TF_WORKSPACE: learn-terraform-github-actions
+2023-12-12T00:33:28.1690219Z   CONFIG_DIRECTORY: ./
+2023-12-12T00:33:28.1690564Z ##[endgroup]
+2023-12-12T00:33:28.3562318Z Syncing repository: nicps-git/hackathon2_irannicholas
+2023-12-12T00:33:28.3564205Z ##[group]Getting Git version info
+2023-12-12T00:33:28.3565071Z Working directory is '/home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas'
+2023-12-12T00:33:28.3566217Z [command]/usr/bin/git version
+2023-12-12T00:33:28.3589107Z git version 2.43.0
+2023-12-12T00:33:28.3612628Z ##[endgroup]
+2023-12-12T00:33:28.3626718Z Temporarily overriding HOME='/home/runner/work/_temp/c2f349fc-f1d9-45d4-b357-2637a3ded739' before making global git config changes
+2023-12-12T00:33:28.3628291Z Adding repository directory to the temporary git global config as a safe directory
+2023-12-12T00:33:28.3632165Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas
+2023-12-12T00:33:28.3677468Z Deleting the contents of '/home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas'
+2023-12-12T00:33:28.3681587Z ##[group]Initializing the repository
+2023-12-12T00:33:28.3684920Z [command]/usr/bin/git init /home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas
+2023-12-12T00:33:28.3780706Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-12-12T00:33:28.3781958Z hint: is subject to change. To configure the initial branch name to use in all
+2023-12-12T00:33:28.3783689Z hint: of your new repositories, which will suppress this warning, call:
+2023-12-12T00:33:28.3784732Z hint: 
+2023-12-12T00:33:28.3785504Z hint: 	git config --global init.defaultBranch <name>
+2023-12-12T00:33:28.3786355Z hint: 
+2023-12-12T00:33:28.3786965Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-12-12T00:33:28.3787780Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-12-12T00:33:28.3788431Z hint: 
+2023-12-12T00:33:28.3788928Z hint: 	git branch -m <name>
+2023-12-12T00:33:28.3794011Z Initialized empty Git repository in /home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas/.git/
+2023-12-12T00:33:28.3803718Z [command]/usr/bin/git remote add origin https://github.com/nicps-git/hackathon2_irannicholas
+2023-12-12T00:33:28.3848251Z ##[endgroup]
+2023-12-12T00:33:28.3849454Z ##[group]Disabling automatic garbage collection
+2023-12-12T00:33:28.3852550Z [command]/usr/bin/git config --local gc.auto 0
+2023-12-12T00:33:28.3890334Z ##[endgroup]
+2023-12-12T00:33:28.3891380Z ##[group]Setting up auth
+2023-12-12T00:33:28.3896170Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-12-12T00:33:28.3933991Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-12-12T00:33:28.4250105Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-12-12T00:33:28.4286682Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-12-12T00:33:28.4528840Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-12-12T00:33:28.4571515Z ##[endgroup]
+2023-12-12T00:33:28.4572387Z ##[group]Fetching the repository
+2023-12-12T00:33:28.4579915Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +0a8ed158d1806f96839171b111719abc887d3ccf:refs/remotes/origin/main
+2023-12-12T00:33:28.8450697Z remote: Enumerating objects: 12, done.        
+2023-12-12T00:33:28.8452723Z remote: Counting objects:   8% (1/12)        
+2023-12-12T00:33:28.8453867Z remote: Counting objects:  16% (2/12)        
+2023-12-12T00:33:28.8457100Z remote: Counting objects:  25% (3/12)        
+2023-12-12T00:33:28.8458385Z remote: Counting objects:  33% (4/12)        
+2023-12-12T00:33:28.8459462Z remote: Counting objects:  41% (5/12)        
+2023-12-12T00:33:28.8460521Z remote: Counting objects:  50% (6/12)        
+2023-12-12T00:33:28.8462935Z remote: Counting objects:  58% (7/12)        
+2023-12-12T00:33:28.8463761Z remote: Counting objects:  66% (8/12)        
+2023-12-12T00:33:28.8464371Z remote: Counting objects:  75% (9/12)        
+2023-12-12T00:33:28.8465633Z remote: Counting objects:  83% (10/12)        
+2023-12-12T00:33:28.8466722Z remote: Counting objects:  91% (11/12)        
+2023-12-12T00:33:28.8467883Z remote: Counting objects: 100% (12/12)        
+2023-12-12T00:33:28.8468414Z remote: Counting objects: 100% (12/12), done.        
+2023-12-12T00:33:28.8469277Z remote: Compressing objects:   8% (1/12)        
+2023-12-12T00:33:28.8469993Z remote: Compressing objects:  16% (2/12)        
+2023-12-12T00:33:28.8472078Z remote: Compressing objects:  25% (3/12)        
+2023-12-12T00:33:28.8473021Z remote: Compressing objects:  33% (4/12)        
+2023-12-12T00:33:28.8473616Z remote: Compressing objects:  41% (5/12)        
+2023-12-12T00:33:28.8474150Z remote: Compressing objects:  50% (6/12)        
+2023-12-12T00:33:28.8474696Z remote: Compressing objects:  58% (7/12)        
+2023-12-12T00:33:28.8475176Z remote: Compressing objects:  66% (8/12)        
+2023-12-12T00:33:28.8475624Z remote: Compressing objects:  75% (9/12)        
+2023-12-12T00:33:28.8476170Z remote: Compressing objects:  83% (10/12)        
+2023-12-12T00:33:28.8476692Z remote: Compressing objects:  91% (11/12)        
+2023-12-12T00:33:28.8477191Z remote: Compressing objects: 100% (12/12)        
+2023-12-12T00:33:28.8477733Z remote: Compressing objects: 100% (12/12), done.        
+2023-12-12T00:33:28.8921274Z remote: Total 12 (delta 0), reused 6 (delta 0), pack-reused 0        
+2023-12-12T00:33:28.8993949Z From https://github.com/nicps-git/hackathon2_irannicholas
+2023-12-12T00:33:28.8995218Z  * [new ref]         0a8ed158d1806f96839171b111719abc887d3ccf -> origin/main
+2023-12-12T00:33:28.9020408Z ##[endgroup]
+2023-12-12T00:33:28.9021458Z ##[group]Determining the checkout info
+2023-12-12T00:33:28.9022865Z ##[endgroup]
+2023-12-12T00:33:28.9023902Z ##[group]Checking out the ref
+2023-12-12T00:33:28.9027635Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2023-12-12T00:33:28.9083143Z Switched to a new branch 'main'
+2023-12-12T00:33:28.9084128Z branch 'main' set up to track 'origin/main'.
+2023-12-12T00:33:28.9090210Z ##[endgroup]
+2023-12-12T00:33:28.9132897Z [command]/usr/bin/git log -1 --format='%H'
+2023-12-12T00:33:28.9165771Z '0a8ed158d1806f96839171b111719abc887d3ccf'
+2023-12-12T00:33:28.9433747Z ##[group]Run hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
+2023-12-12T00:33:28.9434446Z with:
+2023-12-12T00:33:28.9434916Z   workspace: learn-terraform-github-actions
+2023-12-12T00:33:28.9435385Z   directory: ./
+2023-12-12T00:33:28.9435683Z   speculative: false
+2023-12-12T00:33:28.9436076Z env:
+2023-12-12T00:33:28.9436439Z   TF_CLOUD_ORGANIZATION: ittallet_irannicholas
+2023-12-12T00:33:28.9437563Z   TF_API_TOKEN: ***
+2023-12-12T00:33:28.9438035Z   TF_WORKSPACE: learn-terraform-github-actions
+2023-12-12T00:33:28.9438516Z   CONFIG_DIRECTORY: ./
+2023-12-12T00:33:28.9438864Z ##[endgroup]
+2023-12-12T00:33:28.9703581Z ##[command]/usr/bin/docker run --name hashicorptfciv100_2420c8 --label 25e182 --workdir /github/workspace --rm -e "TF_CLOUD_ORGANIZATION" -e "TF_API_TOKEN" -e "TF_WORKSPACE" -e "CONFIG_DIRECTORY" -e "INPUT_WORKSPACE" -e "INPUT_DIRECTORY" -e "INPUT_HOSTNAME" -e "INPUT_TOKEN" -e "INPUT_ORGANIZATION" -e "INPUT_SPECULATIVE" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas":"/github/workspace" hashicorp/tfci:v1.0.0  "tfci" "-hostname=" "-token=" "-organization=" "upload" "-workspace=learn-terraform-github-actions" "-directory=./" "-speculative=false"
+2023-12-12T00:33:30.0904701Z Configuration Version has been created: cv-S9ULNikC4ZH4i3wT
+2023-12-12T00:33:30.5219966Z Uploading configuration...
+2023-12-12T00:33:30.6487400Z Upload Status: 'uploaded'
+2023-12-12T00:33:30.6489216Z {
+2023-12-12T00:33:30.6489952Z   "configuration_version_id": "cv-S9ULNikC4ZH4i3wT",
+2023-12-12T00:33:30.6491013Z   "configuration_version_status": "uploaded",
+2023-12-12T00:33:30.6491724Z   "status": "Success"
+2023-12-12T00:33:30.6492258Z }
+2023-12-12T00:33:30.8046895Z ##[group]Run hashicorp/tfc-workflows-github/actions/create-run@v1.0.0
+2023-12-12T00:33:30.8047738Z with:
+2023-12-12T00:33:30.8048078Z   workspace: learn-terraform-github-actions
+2023-12-12T00:33:30.8048694Z   configuration_version: cv-S9ULNikC4ZH4i3wT
+2023-12-12T00:33:30.8049163Z   plan_only: false
+2023-12-12T00:33:30.8049466Z env:
+2023-12-12T00:33:30.8049879Z   TF_CLOUD_ORGANIZATION: ittallet_irannicholas
+2023-12-12T00:33:30.8050745Z   TF_API_TOKEN: ***
+2023-12-12T00:33:30.8051194Z   TF_WORKSPACE: learn-terraform-github-actions
+2023-12-12T00:33:30.8051716Z   CONFIG_DIRECTORY: ./
+2023-12-12T00:33:30.8052032Z ##[endgroup]
+2023-12-12T00:33:30.8073113Z ##[command]/usr/bin/docker run --name hashicorptfciv100_193b91 --label 25e182 --workdir /github/workspace --rm -e "TF_CLOUD_ORGANIZATION" -e "TF_API_TOKEN" -e "TF_WORKSPACE" -e "CONFIG_DIRECTORY" -e "INPUT_WORKSPACE" -e "INPUT_CONFIGURATION_VERSION" -e "INPUT_HOSTNAME" -e "INPUT_TOKEN" -e "INPUT_ORGANIZATION" -e "INPUT_MESSAGE" -e "INPUT_PLAN_ONLY" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas":"/github/workspace" hashicorp/tfci:v1.0.0  "tfci" "-hostname=" "-token=" "-organization=" "run" "create" "-workspace=learn-terraform-github-actions" "-configuration_version=cv-S9ULNikC4ZH4i3wT" "-message=" "-plan-only=false"
+2023-12-12T00:33:32.2875737Z Created Run ID: run-UTVNcxQFpUqPDnKN
+2023-12-12T00:33:32.6066741Z Run Status: 'pending'
+2023-12-12T00:33:34.8346172Z Run Status: 'plan_queued'
+2023-12-12T00:33:39.1409126Z Run Status: 'planning'
+2023-12-12T00:33:45.3784256Z Run Status: 'planning'
+2023-12-12T00:33:52.6256056Z Run Status: 'planned'
+2023-12-12T00:33:52.9528573Z 
+2023-12-12T00:33:52.9529642Z -------------- Plan Log --------------
+2023-12-12T00:33:53.2638195Z Terraform v1.6.5
+2023-12-12T00:33:53.2638863Z on linux_amd64
+2023-12-12T00:33:53.2639375Z Initializing plugins and modules...
+2023-12-12T00:33:53.2641153Z {"@level":"info","@message":"Terraform 1.6.5","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:43.490374Z","terraform":"1.6.5","type":"version","ui":"1.2"}
+2023-12-12T00:33:53.2643508Z {"@level":"info","@message":"random_pet.sg: Refreshing state... [id=eager-airedale]","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.408269Z","hook":{"resource":{"addr":"random_pet.sg","module":"","resource":"random_pet.sg","implied_provider":"random","resource_type":"random_pet","resource_name":"sg","resource_key":null},"id_key":"id","id_value":"eager-airedale"},"type":"refresh_start"}
+2023-12-12T00:33:53.2646892Z {"@level":"info","@message":"random_pet.sg: Refresh complete [id=eager-airedale]","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.410393Z","hook":{"resource":{"addr":"random_pet.sg","module":"","resource":"random_pet.sg","implied_provider":"random","resource_type":"random_pet","resource_name":"sg","resource_key":null},"id_key":"id","id_value":"eager-airedale"},"type":"refresh_complete"}
+2023-12-12T00:33:53.2650354Z {"@level":"info","@message":"data.aws_ami.ubuntu: Refreshing...","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.628372Z","hook":{"resource":{"addr":"data.aws_ami.ubuntu","module":"","resource":"data.aws_ami.ubuntu","implied_provider":"aws","resource_type":"aws_ami","resource_name":"ubuntu","resource_key":null},"action":"read"},"type":"apply_start"}
+2023-12-12T00:33:53.2653657Z {"@level":"info","@message":"data.aws_ami.ubuntu: Refresh complete after 0s [id=ami-027a754129abb5386]","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.806743Z","hook":{"resource":{"addr":"data.aws_ami.ubuntu","module":"","resource":"data.aws_ami.ubuntu","implied_provider":"aws","resource_type":"aws_ami","resource_name":"ubuntu","resource_key":null},"action":"read","id_key":"id","id_value":"ami-027a754129abb5386","elapsed_seconds":0},"type":"apply_complete"}
+2023-12-12T00:33:53.2657001Z {"@level":"info","@message":"aws_security_group.web-sg: Plan to create","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.824536Z","change":{"resource":{"addr":"aws_security_group.web-sg","module":"","resource":"aws_security_group.web-sg","implied_provider":"aws","resource_type":"aws_security_group","resource_name":"web-sg","resource_key":null},"action":"create"},"type":"planned_change"}
+2023-12-12T00:33:53.2660027Z {"@level":"info","@message":"aws_instance.web: Plan to create","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.824657Z","change":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create"},"type":"planned_change"}
+2023-12-12T00:33:53.2662344Z {"@level":"info","@message":"Plan: 2 to add, 0 to change, 0 to destroy.","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.824717Z","changes":{"add":2,"change":0,"import":0,"remove":0,"operation":"plan"},"type":"change_summary"}
+2023-12-12T00:33:53.2664120Z {"@level":"info","@message":"Outputs: 1","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.824785Z","outputs":{"web-address":{"sensitive":false,"action":"create"}},"type":"outputs"}
+2023-12-12T00:33:53.3446960Z {"@level":"warn","@message":"Warning: Value for undeclared variable","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.824859Z","diagnostic":{"severity":"warning","summary":"Value for undeclared variable","detail":"The root module does not declare a variable named \"AWS_ACCESS_KEY_ID\" but a value was found in file \"/home/tfc-agent/.tfc-agent/component/terraform/runs/run-UTVNcxQFpUqPDnKN/terraform.tfvars\". If you meant to use this value, add a \"variable\" block to the configuration.\n\nTo silence these warnings, use TF_VAR_... environment variables to provide certain \"global\" settings to all configurations in your organization. To reduce the verbosity of these warnings, use the -compact-warnings option."},"type":"diagnostic"}
+2023-12-12T00:33:53.3454330Z {"@level":"warn","@message":"Warning: Value for undeclared variable","@module":"terraform.ui","@timestamp":"2023-12-12T00:33:46.825016Z","diagnostic":{"severity":"warning","summary":"Value for undeclared variable","detail":"The root module does not declare a variable named \"AWS_SECRET_ACCESS_KEY\" but a value was found in file \"/home/tfc-agent/.tfc-agent/component/terraform/runs/run-UTVNcxQFpUqPDnKN/terraform.tfvars\". If you meant to use this value, add a \"variable\" block to the configuration.\n\nTo silence these warnings, use TF_VAR_... environment variables to provide certain \"global\" settings to all configurations in your organization. To reduce the verbosity of these warnings, use the -compact-warnings option."},"type":"diagnostic"}
+2023-12-12T00:33:53.6463159Z 
+2023-12-12T00:33:53.9095694Z View Run in Terraform Cloud: https://app.terraform.io/app/ittallet_irannicholas/workspaces/learn-terraform-github-actions/runs/run-UTVNcxQFpUqPDnKN
+2023-12-12T00:33:53.9098356Z {
+2023-12-12T00:33:53.9099287Z   "configuration_version_id": "cv-S9ULNikC4ZH4i3wT",
+2023-12-12T00:33:53.9100601Z   "plan_id": "plan-Jv8LtEjDvTSLxKby",
+2023-12-12T00:33:53.9101490Z   "plan_status": "finished",
+2023-12-12T00:33:53.9102351Z   "run_id": "run-UTVNcxQFpUqPDnKN",
+2023-12-12T00:33:53.9104251Z   "run_link": "https://app.terraform.io/app/ittallet_irannicholas/workspaces/learn-terraform-github-actions/runs/run-UTVNcxQFpUqPDnKN",
+2023-12-12T00:33:53.9106199Z   "run_message": "Triggered from Terraform Cloud CI by Author (nicps-git) for SHA (0a8ed15)",
+2023-12-12T00:33:53.9107692Z   "run_status": "planned",
+2023-12-12T00:33:53.9110707Z   "status": "Success"
+2023-12-12T00:33:53.9111472Z }
+2023-12-12T00:33:54.0444153Z ##[group]Run hashicorp/tfc-workflows-github/actions/apply-run@v1.0.0
+2023-12-12T00:33:54.0444844Z with:
+2023-12-12T00:33:54.0445169Z   run: run-UTVNcxQFpUqPDnKN
+2023-12-12T00:33:54.0445757Z   comment: Apply Run from GitHub Actions CI 0a8ed158d1806f96839171b111719abc887d3ccf
+2023-12-12T00:33:54.0446390Z env:
+2023-12-12T00:33:54.0446789Z   TF_CLOUD_ORGANIZATION: ittallet_irannicholas
+2023-12-12T00:33:54.0448100Z   TF_API_TOKEN: ***
+2023-12-12T00:33:54.0448635Z   TF_WORKSPACE: learn-terraform-github-actions
+2023-12-12T00:33:54.0449064Z   CONFIG_DIRECTORY: ./
+2023-12-12T00:33:54.0449413Z ##[endgroup]
+2023-12-12T00:33:54.0468155Z ##[command]/usr/bin/docker run --name hashicorptfciv100_a08fb0 --label 25e182 --workdir /github/workspace --rm -e "TF_CLOUD_ORGANIZATION" -e "TF_API_TOKEN" -e "TF_WORKSPACE" -e "CONFIG_DIRECTORY" -e "INPUT_RUN" -e "INPUT_COMMENT" -e "INPUT_HOSTNAME" -e "INPUT_TOKEN" -e "INPUT_ORGANIZATION" -e "HOME" -e "GITHUB_JOB" -e "GITHUB_REF" -e "GITHUB_SHA" -e "GITHUB_REPOSITORY" -e "GITHUB_REPOSITORY_OWNER" -e "GITHUB_REPOSITORY_OWNER_ID" -e "GITHUB_RUN_ID" -e "GITHUB_RUN_NUMBER" -e "GITHUB_RETENTION_DAYS" -e "GITHUB_RUN_ATTEMPT" -e "GITHUB_REPOSITORY_ID" -e "GITHUB_ACTOR_ID" -e "GITHUB_ACTOR" -e "GITHUB_TRIGGERING_ACTOR" -e "GITHUB_WORKFLOW" -e "GITHUB_HEAD_REF" -e "GITHUB_BASE_REF" -e "GITHUB_EVENT_NAME" -e "GITHUB_SERVER_URL" -e "GITHUB_API_URL" -e "GITHUB_GRAPHQL_URL" -e "GITHUB_REF_NAME" -e "GITHUB_REF_PROTECTED" -e "GITHUB_REF_TYPE" -e "GITHUB_WORKFLOW_REF" -e "GITHUB_WORKFLOW_SHA" -e "GITHUB_WORKSPACE" -e "GITHUB_ACTION" -e "GITHUB_EVENT_PATH" -e "GITHUB_ACTION_REPOSITORY" -e "GITHUB_ACTION_REF" -e "GITHUB_PATH" -e "GITHUB_ENV" -e "GITHUB_STEP_SUMMARY" -e "GITHUB_STATE" -e "GITHUB_OUTPUT" -e "RUNNER_OS" -e "RUNNER_ARCH" -e "RUNNER_NAME" -e "RUNNER_ENVIRONMENT" -e "RUNNER_TOOL_CACHE" -e "RUNNER_TEMP" -e "RUNNER_WORKSPACE" -e "ACTIONS_RUNTIME_URL" -e "ACTIONS_RUNTIME_TOKEN" -e "ACTIONS_CACHE_URL" -e "ACTIONS_RESULTS_URL" -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/_temp/_runner_file_commands":"/github/file_commands" -v "/home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas":"/github/workspace" hashicorp/tfci:v1.0.0  "tfci" "-hostname=" "-token=" "-organization=" "run" "apply" "-run=run-UTVNcxQFpUqPDnKN" "-comment=Apply Run from GitHub Actions CI 0a8ed158d1806f96839171b111719abc887d3ccf"
+2023-12-12T00:33:55.4224278Z Run Status: 'apply_queued'
+2023-12-12T00:33:57.6903280Z Run Status: 'apply_queued'
+2023-12-12T00:34:01.9454655Z Run Status: 'applying'
+2023-12-12T00:34:08.2534532Z Run Status: 'applying'
+2023-12-12T00:34:15.5035231Z Run Status: 'applying'
+2023-12-12T00:34:22.9543555Z Run Status: 'applying'
+2023-12-12T00:34:30.2416259Z Run Status: 'applying'
+2023-12-12T00:34:37.5123777Z Run Status: 'applying'
+2023-12-12T00:34:44.8012329Z Run Status: 'applied'
+2023-12-12T00:34:45.0660852Z 
+2023-12-12T00:34:45.0661853Z -------------- Apply Log --------------
+2023-12-12T00:34:45.3907727Z Terraform v1.6.5
+2023-12-12T00:34:45.3908525Z on linux_amd64
+2023-12-12T00:34:45.3908886Z Initializing plugins and modules...
+2023-12-12T00:34:45.3910159Z {"@level":"info","@message":"Terraform 1.6.5","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:07.265170Z","terraform":"1.6.5","type":"version","ui":"1.2"}
+2023-12-12T00:34:45.3912868Z {"@level":"info","@message":"aws_security_group.web-sg: Plan to create","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:08.916233Z","change":{"resource":{"addr":"aws_security_group.web-sg","module":"","resource":"aws_security_group.web-sg","implied_provider":"aws","resource_type":"aws_security_group","resource_name":"web-sg","resource_key":null},"action":"create"},"type":"planned_change"}
+2023-12-12T00:34:45.3916561Z {"@level":"info","@message":"aws_instance.web: Plan to create","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:08.916357Z","change":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create"},"type":"planned_change"}
+2023-12-12T00:34:45.3919776Z {"@level":"info","@message":"aws_security_group.web-sg: Creating...","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:09.409663Z","hook":{"resource":{"addr":"aws_security_group.web-sg","module":"","resource":"aws_security_group.web-sg","implied_provider":"aws","resource_type":"aws_security_group","resource_name":"web-sg","resource_key":null},"action":"create"},"type":"apply_start"}
+2023-12-12T00:34:45.3923383Z {"@level":"info","@message":"aws_security_group.web-sg: Creation complete after 3s [id=sg-09014169f12262f0b]","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:11.540459Z","hook":{"resource":{"addr":"aws_security_group.web-sg","module":"","resource":"aws_security_group.web-sg","implied_provider":"aws","resource_type":"aws_security_group","resource_name":"web-sg","resource_key":null},"action":"create","id_key":"id","id_value":"sg-09014169f12262f0b","elapsed_seconds":3},"type":"apply_complete"}
+2023-12-12T00:34:45.3926673Z {"@level":"info","@message":"aws_instance.web: Creating...","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:11.554075Z","hook":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create"},"type":"apply_start"}
+2023-12-12T00:34:45.3929849Z {"@level":"info","@message":"aws_instance.web: Still creating... [10s elapsed]","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:21.554963Z","hook":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create","elapsed_seconds":10},"type":"apply_progress"}
+2023-12-12T00:34:45.3933024Z {"@level":"info","@message":"aws_instance.web: Still creating... [20s elapsed]","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:31.555872Z","hook":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create","elapsed_seconds":20},"type":"apply_progress"}
+2023-12-12T00:34:45.3936290Z {"@level":"info","@message":"aws_instance.web: Still creating... [30s elapsed]","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:41.556361Z","hook":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create","elapsed_seconds":30},"type":"apply_progress"}
+2023-12-12T00:34:45.3939735Z {"@level":"info","@message":"aws_instance.web: Creation complete after 31s [id=i-0f4cb3a9c3f4c2aec]","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:43.274788Z","hook":{"resource":{"addr":"aws_instance.web","module":"","resource":"aws_instance.web","implied_provider":"aws","resource_type":"aws_instance","resource_name":"web","resource_key":null},"action":"create","id_key":"id","id_value":"i-0f4cb3a9c3f4c2aec","elapsed_seconds":31},"type":"apply_complete"}
+2023-12-12T00:34:45.3944097Z {"@level":"info","@message":"Apply complete! Resources: 2 added, 0 changed, 0 destroyed.","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:43.667185Z","changes":{"add":2,"change":0,"import":0,"remove":0,"operation":"apply"},"type":"change_summary"}
+2023-12-12T00:34:45.3946267Z {"@level":"info","@message":"Outputs: 1","@module":"terraform.ui","@timestamp":"2023-12-12T00:34:43.667355Z","outputs":{"web-address":{"sensitive":false,"type":"string","value":"ec2-3-81-21-143.compute-1.amazonaws.com:8080"}},"type":"outputs"}
+2023-12-12T00:34:45.5955225Z 
+2023-12-12T00:34:45.7460770Z View Run in Terraform Cloud: https://app.terraform.io/app/ittallet_irannicholas/workspaces/learn-terraform-github-actions/runs/run-UTVNcxQFpUqPDnKN
+2023-12-12T00:34:45.7461988Z {
+2023-12-12T00:34:45.7462586Z   "run_id": "run-UTVNcxQFpUqPDnKN",
+2023-12-12T00:34:45.7463949Z   "run_link": "https://app.terraform.io/app/ittallet_irannicholas/workspaces/learn-terraform-github-actions/runs/run-UTVNcxQFpUqPDnKN",
+2023-12-12T00:34:45.7465888Z   "run_status": "applied",
+2023-12-12T00:34:45.7466649Z   "status": "Success"
+2023-12-12T00:34:45.7467504Z }
+2023-12-12T00:34:45.8651839Z Post job cleanup.
+2023-12-12T00:34:45.9475863Z [command]/usr/bin/git version
+2023-12-12T00:34:45.9519318Z git version 2.43.0
+2023-12-12T00:34:45.9558087Z Temporarily overriding HOME='/home/runner/work/_temp/d4115780-91d5-4fbd-9f02-04147e342085' before making global git config changes
+2023-12-12T00:34:45.9559558Z Adding repository directory to the temporary git global config as a safe directory
+2023-12-12T00:34:45.9563821Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/hackathon2_irannicholas/hackathon2_irannicholas
+2023-12-12T00:34:45.9605245Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-12-12T00:34:45.9644222Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-12-12T00:34:45.9892010Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-12-12T00:34:45.9920009Z http.https://github.com/.extraheader
+2023-12-12T00:34:45.9931422Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-12-12T00:34:45.9969359Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-12-12T00:34:46.0452131Z Cleaning up orphan processes
