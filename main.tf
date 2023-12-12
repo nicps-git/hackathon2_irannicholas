@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 resource "random_pet" "sg" {
-  #vpc_security_group_ids = ["sg-0fee455f91fe03dc6"]
+  # vpc_security_group_ids = ["sg-0fee455f91fe03dc6"]
 }
 
 data "aws_ami" "ubuntu" {
